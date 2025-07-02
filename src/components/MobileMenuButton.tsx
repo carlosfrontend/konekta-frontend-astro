@@ -17,7 +17,6 @@ export default function MobilemenuButton() {
         }
     }
     const handleClickClose = () => {
-        console.log('cerrar');
         const menu = document.getElementById('mobile-menu');
         menu?.classList.remove('animate-fade-in-right');
         menu?.classList.add('animate-fade-out-right');
