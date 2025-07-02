@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+body {
+  @apply bg-white;
+}
+
+@theme {
+  --animate-rotate-left: rotate-left 0.3s ease-in-out;
+  --animate-fade-in-right: fade-in-right 0.3s ease-out forwards;
+  --animate-fade-out-right: fade-out-right 0.2s ease-in forwards;
+  @keyframes rotate-left {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes fade-out-right {
+    0% {
+      opacity: 100%;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(200%);
+    }
+  }
+}
