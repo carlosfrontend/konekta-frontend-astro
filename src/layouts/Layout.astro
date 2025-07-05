@@ -17,5 +17,28 @@ const title = `KonektaFrontend | La conferencia de programación Web en Madrid 
   </head>
   <body>
     <slot />
+    <script src='../../node_modules/particlesjs/dist/particles.min.js'></script>
   </body>
 </html>
+
+<script type='module' is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    import('../../node_modules/particlesjs/dist/particles.min.js');
+
+    Particles.init({
+      selector: '.animated-bg',
+      color: '#c87227',
+      sizeVariations: 8,
+      maxParticles: 18,
+      speed: 1
+    });
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.add('scrolled');
+      } else {
+        navbar?.classList.remove('scrolled');
+      }
+    });
+  });
+</script>

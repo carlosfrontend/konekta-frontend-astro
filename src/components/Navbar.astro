@@ -2,10 +2,12 @@
 import MobileMenuButton from './MobileMenuButton';
 ---
 
-<nav class='fixed flex items-center justify-between w-full p-4 md:p-8 z-50'>
+<nav
+  class='navbar fixed flex items-center justify-between w-full p-4 md:p-8 z-50 h-16 md:h-27'
+>
   <ul>
     <li>
-      <a href='/' class='text-2xl'
+      <a href='#home' class='text-2xl'
         ><span
           class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent font-bold'
           >KONEKTA</span
@@ -22,17 +24,17 @@ import MobileMenuButton from './MobileMenuButton';
       <a href='#home' class='text-lg text-white/90'>INICIO</a>
     </li>
     <li>
-      <a href='/about' class='text-lg text-white/90'>+INFO</a>
+      <a href='#about' class='text-lg text-white/90'>+INFO</a>
     </li>
     <li>
-      <a href='/speakers' class='text-lg text-white/90'>PONENTES</a>
+      <a href='#speakers' class='text-lg text-white/90'>PONENTES</a>
     </li>
     <li>
-      <a href='/schedule' class='text-lg text-white/90'>AGENDA</a>
+      <a href='#schedule' class='text-lg text-white/90'>AGENDA</a>
     </li>
     <li>
       <a
-        href='/entradas'
+        href='#tickets'
         class='flex text-lg font-bold text-black/80 bg-amber-500 px-4 py-2'
         >APÚNTATE</a
       >
@@ -44,17 +46,21 @@ import MobileMenuButton from './MobileMenuButton';
     id='mobile-menu'
     class='absolute flex left-[100%] top-0 w-screen h-dvh flex-col gap-6 items-center justify-center bg-black md:hidden'
   >
-    <li class='py-4'><a href='#home' class='text-2xl text-white'>INICIO</a></li>
-    <li class='py-4'><a href='/about' class='text-2xl text-white'>+INFO</a></li>
     <li class='py-4'>
-      <a href='/speakers' class='text-2xl text-white'>PONENTES</a>
+      <a href='#home' class='text-2xl text-white'>INICIO</a>
     </li>
     <li class='py-4'>
-      <a href='/schedule' class='text-2xl text-white'>AGENDA</a>
+      <a href='#about' class='text-2xl text-white'>+INFO</a>
+    </li>
+    <li class='py-4'>
+      <a href='#speakers' class='text-2xl text-white'>PONENTES</a>
+    </li>
+    <li class='py-4'>
+      <a href='#schedule' class='text-2xl text-white'>AGENDA</a>
     </li>
     <li class='py-4'>
       <a
-        href='/entradas'
+        href='/tickets'
         class='flex text-2xl font-bold text-black/80 bg-amber-500 px-4 py-2'
         >APÚNTATE</a
       >

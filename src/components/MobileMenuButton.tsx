@@ -1,8 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MobilemenuButton() {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+    // Add click event listener to each link in the mobile menu
+    useEffect(() => {
+        if (window.innerWidth >= 768) return
+        const links = document.querySelectorAll('#mobile-menu > li > a');
+        links.forEach((link) => {
+            link.addEventListener('click', handleClickClose);
+        });
+
+        return () => {
+            links.forEach((link) => {
+                link.removeEventListener('click', handleClickClose);
+            });
+        };
+    }, [menuIsOpen]);
 
     const handleClickOpen = () => {
         const menu = document.getElementById('mobile-menu');
@@ -22,6 +37,8 @@ export default function MobilemenuButton() {
         menu?.classList.add('animate-fade-out-right');
         setMenuIsOpen(false);
     }
+
+
 
     if (!menuIsOpen) {
         return <button onClick={handleClickOpen} className="z-50 md:hidden absolute top-4 right-4 cursor-pointer">

@@ -2,12 +2,12 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<div
-  class='min-h-dvh bg-black/60 bg-[url("../assets/images/madrid.avif")] bg-cover bg-center bg-no-repeat bg-blend-color-dodge flex flex-col items-center justify-center p-6'
+<section
+  id='home'
+  class='min-h-dvh bg-black/60 bg-[url("../assets/images/madrid.avif")] bg-cover bg-center bg-no-repeat bg-blend-color-dodge flex flex-col items-center justify-center snap-start px-4'
 >
   <div
-    id='#home'
-    class='max-w-full md:w-[600px] z-10 h-auto bg-black/60 rounded-md flex flex-col items-center justify-center gap-6 mx-auto py-8 px-10'
+    class='relative max-w-full top-14 md:w-[600px] z-10 bg-black/60 rounded-md flex flex-col items-center justify-center gap-6 py-8 px-10'
   >
     <p class='text-2xl text-white text-center font-bold'>
       Llega este verano a Madrid:
@@ -28,15 +28,15 @@ const currentYear = new Date().getFullYear();
       desarrolladores del mundo
     </h2>
     <p class='text-md text-white text-center font-extra-light'>
-      El 18 de agosto de {currentYear} en el Hotel CodeHostel de Madrid
+      El 18, 19 y 20 de agosto de {currentYear} en el Hotel CodeHostel de Madrid
     </p>
     <small class='text-sm text-center text-white font-extra-light'
       >Calle del Coder, Nº 2</small
     >
     <a
       href='/entradas'
-      class='flex text-lg font-bold text-black/80 bg-amber-500 px-4 py-2 rounded-md'
+      class='flex text-md md:text-lg font-bold text-black/80 bg-amber-500 px-4 py-2 rounded-md'
       >APÚNTATE AHORA!</a
     >
   </div>
-</div>
+</section>

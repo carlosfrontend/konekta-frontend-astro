@@ -1,6 +1,11 @@
 @import 'tailwindcss';
+
+html {
+  @apply scroll-smooth;
+}
+
 body {
-  @apply bg-white;
+  @apply bg-stone-950 snap-y snap-mandatory;
 }
 
 @theme {
@@ -36,4 +41,20 @@ body {
       transform: translateX(200%);
     }
   }
+}
+
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  @apply bg-black/90 shadow-[10px_1px_1px] shadow-white/20;
+}
+.background {
+  position: absolute;
+  display: block;
+  top: 100dvh;
+  left: 0;
+  z-index: 0;
 }
