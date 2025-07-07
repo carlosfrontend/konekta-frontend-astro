@@ -1,4 +1,6 @@
-[
+import type { Schedule } from "../types"
+
+const schedule: Schedule[] = [
   {
     "day": "18 de Agosto",
     "date": "2025-08-18",
@@ -193,3 +195,5 @@
     ]
   }
 ]
+
+export default schedule

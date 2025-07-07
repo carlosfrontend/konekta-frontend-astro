@@ -4,8 +4,10 @@ import clementineBauchImg from '../assets/images/speakers/clementine_bauch.jpg';
 import patriciaLebsackImg from '../assets/images/speakers/patricia_lebsack.jpg';
 import chelseyDietrichImg from '../assets/images/speakers/chelsey_dietrich.jpg';
 import dennisSchulistImg from '../assets/images/speakers/dennis_schulist.jpg';
+import type { Speaker } from '../types';
 
-const speakersData = [
+
+const speakersData: Speaker[] = [
   {
     "id": 1,
     "name": "Jean Graham",

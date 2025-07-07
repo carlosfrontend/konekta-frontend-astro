@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  isDesktop?: boolean;
+  path: string;
+  className?: string | undefined;
+  listElementClassName?: string | undefined;
+}
+
+const { title, path, className, isDesktop, listElementClassName } = Astro.props;
+---
+
+<li class={isDesktop === true ? '' : listElementClassName}>
+  <a href={path} class={className}>{title}</a>
+</li>

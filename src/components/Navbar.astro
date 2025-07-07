@@ -1,85 +1,45 @@
 ---
+import { navLinks, mobileLinks } from '../data/links';
+import BrandLink from './BrandLink.astro';
 import MobileMenuButton from './MobileMenuButton';
+import NavLink from './NavLink.astro';
 ---
 
 <nav
   class='navbar fixed flex items-center justify-between w-full p-4 md:p-8 z-50 h-16 md:h-27 backdrop-blur-xs'
 >
   <div>
-    <div>
-      <a href='/' class='text-lg font-headings font-bold'>
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent font-bold'
-          >KONEKTA</span
-        >
-        <span
-          class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent font-bold'
-          >FRONTEND</span
-        ></a
-      >
-    </div>
+    <BrandLink firstWord='KONEKTA' secondWord='FRONTEND' path='/' />
   </div>
   <ul class='hidden md:flex gap-4 font-semibold items-center'>
-    <li>
-      <a
-        href='#home'
-        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
-        >INICIO</a
-      >
-    </li>
-    <li>
-      <a
-        href='#about'
-        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
-        >+INFO</a
-      >
-    </li>
-    <li>
-      <a
-        href='#speakers'
-        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
-        >PONENTES</a
-      >
-    </li>
-    <li>
-      <a
-        href='#schedule'
-        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
-        >AGENDA</a
-      >
-    </li>
-    <li>
-      <a
-        href='#tickets'
-        class='flex text-lg font-bold text-black/80 bg-amber-500 px-4 py-2 transition-transform ease-in-out duration-300 hover:scale-95 hover:outline-2 hover:outline-white rounded-md'
-        >APÚNTATE</a
-      >
-    </li>
+    {
+      navLinks.map((link) => (
+        <NavLink
+          title={link.title}
+          path={link.path}
+          className={`${link.className}`}
+          isDesktop={true}
+        />
+      ))
+    }
   </ul>
 
   <MobileMenuButton client:only='react' />
+
   <ul
     id='mobile-menu'
     class='absolute flex left-[100%] top-0 w-screen h-dvh flex-col gap-6 items-center justify-center bg-black md:hidden'
   >
-    <li class='py-4'>
-      <a href='#home' class='text-2xl text-white'>INICIO</a>
-    </li>
-    <li class='py-4'>
-      <a href='#about' class='text-2xl text-white'>+INFO</a>
-    </li>
-    <li class='py-4'>
-      <a href='#speakers' class='text-2xl text-white'>PONENTES</a>
-    </li>
-    <li class='py-4'>
-      <a href='#schedule' class='text-2xl text-white'>AGENDA</a>
-    </li>
-    <li class='py-4'>
-      <a
-        href='#tickets'
-        class='flex text-2xl font-bold text-black/80 bg-amber-500 px-4 py-2'
-        >APÚNTATE</a
-      >
-    </li>
+    {
+      mobileLinks.map((link) => (
+        <NavLink
+          title={link.title}
+          path={link.path}
+          className={`${link.className}`}
+          isDesktop={false}
+          listElementClassName={`${link.listElementClassName}`}
+        />
+      ))
+    }
   </ul>
 </nav>

@@ -22,6 +22,7 @@ export default function MobilemenuButton() {
     const handleClickOpen = () => {
         const menu = document.getElementById('mobile-menu');
         if (menuIsOpen === false) {
+            document.documentElement.classList.add('overflow-hidden');
             menu?.classList.remove('animate-fade-out-right');
             menu?.classList.add('animate-fade-in-right');
             setMenuIsOpen(true);
@@ -32,6 +33,7 @@ export default function MobilemenuButton() {
         }
     }
     const handleClickClose = () => {
+        document.documentElement.classList.remove('overflow-hidden');
         const menu = document.getElementById('mobile-menu');
         menu?.classList.remove('animate-fade-in-right');
         menu?.classList.add('animate-fade-out-right');
