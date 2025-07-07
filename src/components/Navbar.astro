@@ -3,12 +3,12 @@ import MobileMenuButton from './MobileMenuButton';
 ---
 
 <nav
-  class='navbar fixed flex items-center justify-between w-full p-4 md:p-8 z-50 h-16 md:h-27'
+  class='navbar fixed flex items-center justify-between w-full p-4 md:p-8 z-50 h-16 md:h-27 backdrop-blur-xs'
 >
-  <ul>
-    <li>
-      <a href='#home' class='text-2xl'
-        ><span
+  <div>
+    <div>
+      <a href='/' class='text-lg font-headings font-bold'>
+        <span
           class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent font-bold'
           >KONEKTA</span
         >
@@ -17,25 +17,41 @@ import MobileMenuButton from './MobileMenuButton';
           >FRONTEND</span
         ></a
       >
-    </li>
-  </ul>
-  <ul class='hidden md:flex gap-4 font-normal items-center'>
+    </div>
+  </div>
+  <ul class='hidden md:flex gap-4 font-semibold items-center'>
     <li>
-      <a href='#home' class='text-lg text-white/90'>INICIO</a>
-    </li>
-    <li>
-      <a href='#about' class='text-lg text-white/90'>+INFO</a>
-    </li>
-    <li>
-      <a href='#speakers' class='text-lg text-white/90'>PONENTES</a>
+      <a
+        href='#home'
+        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
+        >INICIO</a
+      >
     </li>
     <li>
-      <a href='#schedule' class='text-lg text-white/90'>AGENDA</a>
+      <a
+        href='#about'
+        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
+        >+INFO</a
+      >
+    </li>
+    <li>
+      <a
+        href='#speakers'
+        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
+        >PONENTES</a
+      >
+    </li>
+    <li>
+      <a
+        href='#schedule'
+        class='text-lg text-white/90 transition-transform ease-out hover:scale-110 hover:text-amber-200 inline-block'
+        >AGENDA</a
+      >
     </li>
     <li>
       <a
         href='#tickets'
-        class='flex text-lg font-bold text-black/80 bg-amber-500 px-4 py-2'
+        class='flex text-lg font-bold text-black/80 bg-amber-500 px-4 py-2 transition-transform ease-in-out duration-300 hover:scale-95 hover:outline-2 hover:outline-white rounded-md'
         >APÚNTATE</a
       >
     </li>
@@ -60,7 +76,7 @@ import MobileMenuButton from './MobileMenuButton';
     </li>
     <li class='py-4'>
       <a
-        href='/tickets'
+        href='#tickets'
         class='flex text-2xl font-bold text-black/80 bg-amber-500 px-4 py-2'
         >APÚNTATE</a
       >

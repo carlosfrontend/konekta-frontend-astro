@@ -1,0 +1,64 @@
+---
+import LinkedinIcon from './Icons/LinkedinIcon.astro';
+import XIcon from './Icons/XIcon.astro';
+import GitHubIcon from './Icons/GitHubIcon.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class='py-12 sm:py-16 bg-neutral-950 text-white border-t border-neutral-800 flex flex-col items-center justify-center mt-16'
+>
+  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+    <div class='mb-8'>
+      <h3 class='font-bold font-headings text-white text-3xl mb-4'>
+        <span
+          class='bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent'
+        >
+          KONEKTA
+        </span>
+        <span
+          class='bg-gradient-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
+        >
+          FRONTEND
+        </span>
+      </h3>
+      <p class='text-neutral-400 text-md text-pretty'>
+        La conferencia líder para desarrolladores frontend
+      </p>
+    </div>
+
+    <div class='flex justify-center items-center space-x-6 mb-8'>
+      <a
+        title='Visitar el perfil de Twitter de Konekta Frontend'
+        aria-label='Visitar el perfil de Twitter de Konekta Frontend'
+        href='https://twitter.com/konektafrontend'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='transform duration-300 hover:scale-110'
+      >
+        <XIcon class='w-8 h-7 inline-block aspect-square' />
+      </a>
+      <a
+        title='Visitar el perfil de LinkedIn de Konekta Frontend'
+        aria-label='Visitar el perfil de LinkedIn de Konekta Frontend'
+        href='https://linkedin.com/company/konektafrontend'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='transform duration-300 hover:scale-110'
+      >
+        <LinkedinIcon class='w-8 h-8 inline-block' />
+        <a
+          title='Visitar el perfil de GitHub de Konekta Frontend'
+          aria-label='Visitar el perfil de GitHub de Konekta Frontend'
+          href='https://github.com/konektafrontend'
+          target='_blank'
+          rel='noopener noreferrer'
+          class='transform duration-300 hover:scale-110'
+        >
+          <GitHubIcon class='w-8 h-8 inline-block' /></a
+        >
+      </a>
+    </div>
+  </div>
+</footer>

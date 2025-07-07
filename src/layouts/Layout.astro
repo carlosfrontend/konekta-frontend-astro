@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-const currentYear = new Date().getFullYear();
-const title = `KonektaFrontend | La conferencia de programación Web en Madrid - ${currentYear}`;
+const title = 'KonektaFrontend | La conferencia de programación Web en Madrid';
+// import ClientRouter from 'astro/components/ClientRouter.astro';
 ---
 
 <!doctype html>
@@ -17,13 +17,17 @@ const title = `KonektaFrontend | La conferencia de programación Web en Madrid 
   </head>
   <body>
     <slot />
-    <script src='../../node_modules/particlesjs/dist/particles.min.js'></script>
   </body>
 </html>
 
+<script src='../../node_modules/particlesjs/dist/particles.min.js'></script>
 <script type='module' is:inline>
   window.addEventListener('DOMContentLoaded', () => {
     import('../../node_modules/particlesjs/dist/particles.min.js');
+    if (window.scrollY > 50) {
+      const navbar = document.querySelector('.navbar');
+      navbar?.classList.add('scrolled');
+    }
 
     Particles.init({
       selector: '.animated-bg',

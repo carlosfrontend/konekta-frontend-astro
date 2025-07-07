@@ -1,0 +1,100 @@
+---
+import scheduleData from '../data/schedule.json';
+import speakersData from '../data/speakers';
+
+const speakersMap = new Map(
+  speakersData.map((speaker) => [speaker.id, speaker.name])
+);
+
+function getSpeakerNames(speakerId: number | number[] | undefined): string {
+  if (typeof speakerId === 'number') {
+    return speakersMap.get(speakerId) || 'Ponente Desconocido';
+  } else if (Array.isArray(speakerId)) {
+    return speakerId
+      .map((id) => speakersMap.get(id) || 'Desconocido')
+      .join(' y ');
+  }
+  return '';
+}
+
+function getSessionTypeClass(type: string): string {
+  switch (type.toLowerCase()) {
+    case 'charla':
+      return 'bg-purple-700';
+    case 'taller':
+      return 'bg-blue-700';
+    case 'panel':
+      return 'bg-green-700';
+    case 'hackathon':
+      return 'bg-red-600';
+    case 'general':
+      return 'bg-gray-700';
+    default:
+      return 'bg-gray-700';
+  }
+}
+---
+
+<section
+  id='schedule'
+  class='sm:py-20 bg-stone-950 text-white scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-10 snap-start'
+>
+  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div class='flex justify-center items-center h-auto py-10'>
+      <h3 class='font-bold font-headings text-white text-center text-3xl z-10'>
+        <span
+          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
+        text-transparent'
+          >AGENDA
+        </span>
+        <span
+          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
+        text-transparent'
+          >DEL
+        </span>
+        <span
+          class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
+          >EVENTO</span
+        >
+      </h3>
+    </div>
+
+    <div class='flex flex-col lg:flex-row gap-8 lg:gap-12'>
+      {
+        scheduleData.map((dayData, index) => (
+          <div class='flex-1 bg-stone-900 rounded-lg shadow-xl p-6 border border-white/80'>
+            <h3 class='text-3xl font-semibold text-center mb-6 text-amber-200'>
+              <span class='text-amber-400 font-bold'> Día {index + 1}:</span>{' '}
+              {dayData.day}
+            </h3>
+            <ul class='space-y-6'>
+              {dayData.sessions.map((session) => (
+                <li class='p-4 rounded-lg bg-stone-800 border border-amber-600 shadow-md'>
+                  <div class='flex justify-between items-center mb-2'>
+                    <span class='text-amber-300 font-semibold text-lg'>
+                      {session.time}
+                    </span>
+                    <span
+                      class={`px-3 py-1 rounded-full text-sm font-medium text-white ${getSessionTypeClass(session.type)}`}
+                    >
+                      {session.type}
+                    </span>
+                  </div>
+                  <h4 class='text-xl font-bold text-indigo-100 mb-1'>
+                    {session.title}
+                  </h4>
+                  {session.speakerId && (
+                    <p class='text-orange-300 font-medium mb-2'>
+                      Ponente(s): {getSpeakerNames(session.speakerId)}
+                    </p>
+                  )}
+                  <p class='text-white/80 text-base'>{session.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
