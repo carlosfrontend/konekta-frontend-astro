@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+---
+
+<a
+  title={title}
+  aria-label={title}
+  href={url}
+  target='_blank'
+  rel='noopener noreferrer'
+  class='transform duration-300 hover:scale-110'
+>
+  <slot />
+</a>

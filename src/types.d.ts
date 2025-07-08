@@ -28,3 +28,8 @@ export type Schedule = {
     date: string;
     sessions: Session[]
 }
+
+export type SocialLinks = {
+    title: string;
+    url: string;
+}

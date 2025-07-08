@@ -2,8 +2,8 @@
 import LinkedinIcon from './Icons/LinkedinIcon.astro';
 import XIcon from './Icons/XIcon.astro';
 import GitHubIcon from './Icons/GitHubIcon.astro';
-
-const currentYear = new Date().getFullYear();
+import socialLinks from '../data/socialLinks';
+import SocialLink from './SocialLink.astro';
 ---
 
 <footer
@@ -29,36 +29,19 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <div class='flex justify-center items-center space-x-6 mb-8'>
-      <a
-        title='Visitar el perfil de Twitter de Konekta Frontend'
-        aria-label='Visitar el perfil de Twitter de Konekta Frontend'
-        href='https://twitter.com/konektafrontend'
-        target='_blank'
-        rel='noopener noreferrer'
-        class='transform duration-300 hover:scale-110'
-      >
-        <XIcon class='w-8 h-7 inline-block aspect-square' />
-      </a>
-      <a
-        title='Visitar el perfil de LinkedIn de Konekta Frontend'
-        aria-label='Visitar el perfil de LinkedIn de Konekta Frontend'
-        href='https://linkedin.com/company/konektafrontend'
-        target='_blank'
-        rel='noopener noreferrer'
-        class='transform duration-300 hover:scale-110'
-      >
-        <LinkedinIcon class='w-8 h-8 inline-block' />
-        <a
-          title='Visitar el perfil de GitHub de Konekta Frontend'
-          aria-label='Visitar el perfil de GitHub de Konekta Frontend'
-          href='https://github.com/konektafrontend'
-          target='_blank'
-          rel='noopener noreferrer'
-          class='transform duration-300 hover:scale-110'
-        >
-          <GitHubIcon class='w-8 h-8 inline-block' /></a
-        >
-      </a>
+      {
+        socialLinks.map((socialLink) => (
+          <SocialLink title={socialLink.title} url={socialLink.url}>
+            {socialLink.title.includes('Twitter') ? (
+              <XIcon class='w-8 h-7 inline-block aspect-square' />
+            ) : socialLink.title.includes('LinkedIn') ? (
+              <LinkedinIcon class='w-8 h-8 inline-block' />
+            ) : (
+              <GitHubIcon class='w-8 h-8 inline-block' />
+            )}
+          </SocialLink>
+        ))
+      }
     </div>
   </div>
 </footer>
