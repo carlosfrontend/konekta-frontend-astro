@@ -1,0 +1,20 @@
+---
+import type { Heading } from '../types';
+interface Props {
+  heading: Heading;
+}
+
+const { heading } = Astro.props;
+---
+
+<h3
+  class='font-bold font-headings text-white text-center text-2xl sm:text-3xl z-10'
+>
+  {
+    heading.title.map((title) => (
+      <span class={heading.classNames[heading.title.indexOf(title)]}>
+        {title}
+      </span>
+    ))
+  }
+</h3>

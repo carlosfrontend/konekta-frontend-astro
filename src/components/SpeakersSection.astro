@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import speakersData from '../data/speakers';
+import HeadingOfSection from './HeadingOfSection.astro';
+import { speakersHeading } from '../data/headings';
 ---
 
 <section
@@ -9,20 +11,7 @@ import speakersData from '../data/speakers';
 >
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
     <div class='flex justify-center items-center h-auto py-10'>
-      <h3
-        class='font-bold font-headings text-white text-center text-2xl sm:text-3xl z-10'
-      >
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
-      text-transparent'
-          >NUESTROS
-        </span>
-
-        <span
-          class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-          >PONENTES</span
-        >
-      </h3>
+      <HeadingOfSection heading={speakersHeading} />
     </div>
 
     <div

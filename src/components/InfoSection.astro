@@ -1,3 +1,8 @@
+---
+import HeadingOfSection from './HeadingOfSection.astro';
+import { infoHeading } from '../data/headings';
+---
+
 <section
   id='about'
   class='bg-transparent relative flex flex-col justify-center xl:px-0 scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-10 snap-start mx-10'
@@ -10,24 +15,7 @@
     class='w-full overflow-x-hidden min-h-dvh z-10 flex flex-col justify-center gap-14 sm:gap-6 md:gap-6 relative'
   >
     <div class='flex justify-center items-center h-auto py-10'>
-      <h3
-        class='font-bold font-headings text-white text-center text-2xl sm:text-3xl z-10'
-      >
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
-      text-transparent'
-          >INFORMACIÓN
-        </span>
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
-      text-transparent'
-          >DEL
-        </span>
-        <span
-          class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-          >EVENTO</span
-        >
-      </h3>
+      <HeadingOfSection heading={infoHeading} />
     </div>
     <div
       class='flex w-full justify-center gap-14 sm:gap-6 md:gap-6 flex-wrap md:flex-nowrap'

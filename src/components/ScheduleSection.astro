@@ -1,6 +1,8 @@
 ---
 import scheduleData from '../data/schedule';
 import speakersData from '../data/speakers';
+import HeadingOfSection from './HeadingOfSection.astro';
+import { scheduleHeading } from '../data/headings';
 
 const speakersMap = new Map(
   speakersData.map((speaker) => [speaker.id, speaker.name])
@@ -41,24 +43,7 @@ function getSessionTypeClass(type: string): string {
 >
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
     <div class='flex justify-center items-center h-auto py-10'>
-      <h3
-        class='font-bold font-headings text-white text-center text-2xl sm:text-3xl z-10'
-      >
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
-        text-transparent'
-          >AGENDA
-        </span>
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
-        text-transparent'
-          >DEL
-        </span>
-        <span
-          class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-          >EVENTO</span
-        >
-      </h3>
+      <HeadingOfSection heading={scheduleHeading} />
     </div>
 
     <div class='flex flex-col lg:flex-row gap-8 lg:gap-12'>

@@ -1,23 +1,15 @@
+---
+import { registrationHeading } from '../data/headings';
+import HeadingOfSection from './HeadingOfSection.astro';
+---
+
 <section
   id='tickets'
   class='sm:py-20 bg-stone-950 text-white scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-24 snap-start'
 >
   <div class='max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
     <div class='flex justify-center items-center h-auto py-10'>
-      <h3
-        class='font-bold font-headings text-white text-center text-2xl sm:text-3xl z-10'
-      >
-        <span
-          class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text
-      text-transparent'
-          >REGÍSTRATE
-        </span>
-
-        <span
-          class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-          >GRATIS!</span
-        >
-      </h3>
+      <HeadingOfSection heading={registrationHeading} />
     </div>
 
     <p class='text-lg sm:text-xl text-white/80 mb-10'>

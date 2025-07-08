@@ -33,3 +33,8 @@ export type SocialLinks = {
     title: string;
     url: string;
 }
+
+export type Heading = {
+    title: string[],
+    classNames: string[]
+}
