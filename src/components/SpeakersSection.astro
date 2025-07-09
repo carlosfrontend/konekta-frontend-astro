@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import speakersData from '../data/speakers';
 import HeadingOfSection from './HeadingOfSection.astro';
 import { speakersHeading } from '../data/headings';
+import SpeakerCard from './SpeakerCard.astro';
 ---
 
 <section
@@ -17,24 +18,7 @@ import { speakersHeading } from '../data/headings';
     <div
       class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8'
     >
-      {
-        speakersData.map((speaker) => (
-          <div class='bg-amber-300/80 rounded-lg shadow-xl p-6 text-center transform hover:scale-105 transition duration-300 ease-in-out border border-white'>
-            <Image
-              src={speaker.image}
-              alt={`Foto de ${speaker.name}`}
-              width={speaker.image.width}
-              height={speaker.image.height}
-              class='w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-black shadow-md'
-              format='webp'
-              quality={80}
-              loading='lazy'
-            />
-            <h3 class='text-2xl font-bold mb-2 text-black'>{speaker.name}</h3>
-            <p class='text-black/80 text-lg'>{speaker.position}</p>
-          </div>
-        ))
-      }
+      {speakersData.map((speaker) => <SpeakerCard speaker={speaker} />)}
     </div>
   </div>
 </section>
