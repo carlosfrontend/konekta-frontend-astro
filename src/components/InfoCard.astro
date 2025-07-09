@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+
+  classNames: { 0: string; 1: string; 2: string; 3: string };
+
+  content?: string;
+}
+
+const { title, classNames, content } = Astro.props;
+---
+
+<div class={classNames[0]}>
+  <h4 class={classNames[1]}>{title}</h4>
+  <div class={classNames[2]}>----------------</div>
+  <p class={classNames[3]} set:html={content}>
+    {/*Comment for not self clossing tag */}
+  </p>
+</div>

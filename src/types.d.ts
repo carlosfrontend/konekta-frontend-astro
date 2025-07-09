@@ -38,3 +38,23 @@ export type Heading = {
     title: string[],
     classNames: string[]
 }
+
+export type InfoRow = ({
+    title: string;
+    classNames: {
+        0: string;
+        1: string;
+        2: string;
+        3: string;
+    };
+    content: string;
+} | {
+    title: string;
+    classNames: {
+        0: string;
+        1: string;
+        2: string;
+        3: string;
+    };
+    content?: undefined;
+})[]
