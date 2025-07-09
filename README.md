@@ -139,9 +139,10 @@ Esto generará los archivos estáticos optimizados en el directorio dist/. Puede
 - 🔁 Abre un Pull Request desde tu rama a la rama main de este repositorio.
   🎯🧪🔄
 
-- 📄⚖️📘 Licencia
-  Este proyecto está bajo la Licencia MIT. Ver LICENSE.md para más detalles.
-  📑🔓📝
+## 📄⚖️📘 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver LICENSE.md para más detalles.
+📑🔓📝
 
 ## 📬👤🌐 Contacto
 
