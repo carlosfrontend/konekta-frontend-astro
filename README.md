@@ -1,48 +1,153 @@
-# Astro Starter Kit: Basics
+# ✨🔗🌐 Konekta Frontend (Astro)
 
-```sh
-npm create astro@latest -- --template basics
+📦 Este repositorio contiene el frontend de Konekta, una página estática y ultrarrápida diseñada con **Astro** para promocionar conferencias de programación. Construí esta implementación para demostrar la eficiencia de Astro en la creación de sitios de alto rendimiento, ideales para eventos y fines promocionales, enfocándome en una **experiencia de usuario fluida y optimizada**. 🚀💡
+
+---
+
+## 📄📌🧭 Menú
+
+- ▶️ Demo
+- ⚙️ Funcionalidades
+- 🧰 Tecnologías
+- 🖥️ Cómo ejecutarlo localmente
+  - 🔍 Requisitos
+  - 📦 Instalación de dependencias
+  - 🚀 Ejecutar entorno de desarrollo
+  - 🛠️ Generar build de producción
+- 🗂️ Estructura de carpetas
+- 📜 Scripts disponibles
+- 🌍 Despliegue
+- 🤝 Contribuciones
+- 📄 Licencia
+- 📬 Contacto
+
+---
+
+Visita la demo en vivo para ver el proyecto en acción.
+
+## ▶️ [ Vista en vivo](https://konekta-frontend.netlify.app/)
+
+<!-- Aquí van las imágenes -->
+
+📱⚡🛒
+
+## 🚀🛠️📦 Funcionalidades
+
+- ⚡ **Rendimiento optimizado:** Construido con Astro para tiempos de carga ultrarrápidos y un bajo consumo de recursos.
+- 🎨 **Diseño responsivo:** Adaptado para ofrecer una experiencia de usuario óptima en cualquier dispositivo y tamaño de pantalla.
+- 📝 **SEO amigable:** Astro genera sitios estáticos, lo que favorece un mejor posicionamiento en motores de búsqueda.
+- 🧩 **Integración de componentes:** Posibilidad de integrar componentes interactivos de diferentes frameworks (React, Vue, Svelte, etc.) cuando sea necesario.
+- 🧹 **Código limpio:** Mantenimiento de la calidad del código con ESLint y Prettier.
+- 📈 **Escalabilidad:** Arquitectura diseñada para facilitar el crecimiento y la adición de nuevas funcionalidades.
+
+---
+
+## 🧰🔧💡 Stack Tecnológico
+
+- 🚀 **Astro**: El framework web principal para construir el frontend.
+- 🟦 **TypeScript**: Para un desarrollo más robusto y escalable.
+- 🌬️ **Tailwind CSS**: Para un estilo rápido y altamente personalizable.
+- 🧹 **Prettier**: Para formateo de código consistente.
+- 🔍 **ESLint**: Para asegurar la calidad y consistencia del código.
+
+---
+
+## 🖥️🧪🔄 Ejecución Local
+
+### 🔍⚙️📋 Requisitos
+
+- 🟢 **Node.js** (versión 18 o superior)
+- 📦 **npm** (o Yarn)
+
+### 📥📂🔧 Instalación
+
+```bash
+git clone [https://github.com/carlosfrontend/konekta-frontend-astro.git](https://github.com/carlosfrontend/konekta-frontend-astro.git)
+cd konekta-frontend-astro
+npm install # o yarn install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### 🚀🧪🌐 Ejecutar entorno de desarrollo
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+```bash
+npm run dev # o yarn dev
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Accede en: http://localhost:4321
+🧑‍💻💻🌍
 
-## 🚀 Project Structure
+### 🏗️📦📤 Generar build de producción
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+npm run build # o yarn build
+```
 
-```text
-/
+🗂️📁🧱 Estructura del Proyecto
+
+```
+konekta-frontend-astro/
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── components/
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── pages/
+│   ├── styles/
+│   └── env.d.ts
+├── .astro/
+├── .gitignore
+├── astro.config.mjs
+├── package.json
+├── tsconfig.json
+├── README.md
+└── LICENSE.md
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## ⚙️📜📌 Scripts
 
-## 🧞 Commands
+▶️ npm run dev — Iniciar el servidor de desarrollo de Astro.
 
-All commands are run from the root of the project, from a terminal:
+```bash
+🏗️ npm run dev — Iniciar el servidor de producción (después de una build).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+👁️ npm run build — Construir la aplicación para producción.
 
-## 👀 Want to learn more?
+🚀 npm run preview — Previsualizar la build de producción localmente.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```
+
+## 🚀🌍📤 Despliegue
+
+Para desplegar este proyecto en producción, primero debes construirlo:
+
+```bash
+npm run build
+```
+
+Esto generará los archivos estáticos optimizados en el directorio dist/. Puedes servir estos archivos con cualquier servidor web estático (por ejemplo, Nginx, Apache) o desplegarlo en plataformas como Netlify, Vercel, o GitHub Pages, ya que Astro genera una salida totalmente estática por defecto.
+
+## 🙌👥🔧 Contribuciones
+
+- 🍴 Haz un fork del repositorio.
+
+- 🌿 Crea una rama para tu nueva característica: git checkout -b feature/nombre-caracteristica.
+
+- 🛠️ Realiza tus cambios y haz commit: git commit -m "feat: descripción de la nueva característica".
+
+- 📤 Envía tus cambios a tu repositorio fork: git push origin feature/nombre-caracteristica.
+
+- 🔁 Abre un Pull Request desde tu rama a la rama main de este repositorio.
+  🎯🧪🔄
+
+- 📄⚖️📘 Licencia
+  Este proyecto está bajo la Licencia MIT. Ver LICENSE.md para más detalles.
+  📑🔓📝
+
+## 📬👤🌐 Contacto
+
+📝 Portafolio de Carlos Frontend: https://carlospulido-portafolio.vercel.app/
+
+GitHub: https://github.com/carlosfrontend
+✉️💬📡
+
+🚀 Gracias por visitar este proyecto. ¡No dudes en dejar tu ⭐ si te resulta útil o inspirador! Tu apoyo ayuda a mantener y mejorar este tipo de desarrollos. 🙌💡✨
