@@ -2,9 +2,10 @@
 
 📦 Este repositorio contiene el frontend de Konekta, una página estática y ultrarrápida diseñada con **Astro** para promocionar conferencias de programación. Construí esta implementación para demostrar la eficiencia de Astro en la creación de sitios de alto rendimiento, ideales para eventos y fines promocionales, enfocándome en una **experiencia de usuario fluida y optimizada**. 🚀💡
 
-![Captura desde 2025-07-09 10-31-37](https://github.com/user-attachments/assets/4fd5cdca-3bc6-4515-a96b-abe1bebe566b)
+![Hero Section](https://github.com/user-attachments/assets/37a54862-e944-4c30-9fc6-4234121727d2)
 
-![Captura desde 2025-07-09 11-18-05](https://github.com/user-attachments/assets/4dadc78f-cfe2-429a-920f-b325814b0988)
+
+![Agenda](https://github.com/user-attachments/assets/4dadc78f-cfe2-429a-920f-b325814b0988)
 
 ---
 
