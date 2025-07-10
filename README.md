@@ -49,8 +49,6 @@ Visita la demo en vivo para ver el proyecto en acción.
 - 🚀 **Astro**: El framework web principal para construir el frontend.
 - 🟦 **TypeScript**: Para un desarrollo más robusto y escalable.
 - 🌬️ **Tailwind CSS**: Para un estilo rápido y altamente personalizable.
-- 🧹 **Prettier**: Para formateo de código consistente.
-- 🔍 **ESLint**: Para asegurar la calidad y consistencia del código.
 
 ---
 
