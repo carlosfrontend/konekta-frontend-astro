@@ -5,26 +5,24 @@ import HeadingOfSection from './HeadingOfSection.astro';
 
 <section
   id='tickets'
-  class='sm:py-20 bg-stone-950 text-white scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-24 snap-start'
+  class='sm:py-20 bg-gray-50 scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-24 snap-start'
 >
   <div class='max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
     <div class='flex justify-center items-center h-auto py-10'>
       <HeadingOfSection heading={registrationHeading} />
     </div>
 
-    <p class='text-lg sm:text-xl text-white/80 mb-10'>
+    <p class='text-lg sm:text-xl text-slate-700 mb-10'>
       Completa el formulario para asegurar tu plaza en la Konekta Frontend
       Conference y recibe toda la información.
     </p>
 
-    <div
-      class='bg-neutral-900 rounded-lg shadow-xl p-8 border border-amber-600'
-    >
+    <div class='bg-slate-300 rounded-lg shadow-xl p-8 border border-slate-400'>
       <form id='registrationForm' class='space-y-6'>
         <div>
           <label
             for='name'
-            class='block text-left text-lg font-medium text-white mb-2'
+            class='block text-left text-lg text-sky-700 font-semibold mb-2'
             >Nombre Completo</label
           >
           <input
@@ -33,14 +31,14 @@ import HeadingOfSection from './HeadingOfSection.astro';
             name='name'
             autocomplete='name'
             required
-            class='mt-1 block w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-white placeholder-neutral-500 focus:ring-amber-500 focus:border-amber-500'
+            class='mt-1 block w-full px-4 py-2 bg-slate-200 border border-neutral-700 rounded-md text-slate-700 placeholder-slate-500 focus:ring-sky-700 focus:border-sky-700'
             placeholder='Tu nombre'
           />
         </div>
         <div>
           <label
             for='email'
-            class='block text-left text-lg font-medium text-white mb-2'
+            class='block text-left text-lg font-semibold text-sky-700 mb-2'
             >Correo Electrónico</label
           >
           <input
@@ -49,14 +47,14 @@ import HeadingOfSection from './HeadingOfSection.astro';
             name='email'
             autocomplete='email'
             required
-            class='mt-1 block w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-white placeholder-neutral-500 focus:ring-amber-500 focus:border-amber-500'
+            class='mt-1 block w-full px-4 py-2 bg-slate-200 border border-neutral-700 rounded-md text-slate-700 placeholder-slate-500 focus:ring-sky-700 focus:border-sky-700'
             placeholder='tu.email@ejemplo.com'
           />
         </div>
 
         <button
           type='submit'
-          class='w-full text-lg md:text-xl font-bold text-black/80 bg-amber-500 px-8 py-3 rounded-md transition-transform transform hover:scale-105 shadow-lg cursor-pointer'
+          class='w-full text-lg md:text-xl font-bold text-white bg-pink-700 px-8 py-3 rounded-md transition-transform transform hover:scale-105 shadow-lg cursor-pointer'
         >
           REGISTRARME
         </button>
@@ -64,7 +62,7 @@ import HeadingOfSection from './HeadingOfSection.astro';
 
       <div
         id='formErrorMessage'
-        class='mt-6 text-center text-lg font-semibold text-red-500 hidden'
+        class='mt-6 text-center text-lg font-semibold text-pink-700 hidden'
       >
       </div>
     </div>
@@ -73,16 +71,16 @@ import HeadingOfSection from './HeadingOfSection.astro';
 
 <div
   id='successModal'
-  class='fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50 hidden'
+  class='fixed inset-0 bg-gray-50 bg-opacity-75 items-center justify-center z-50 hidden'
 >
   <div
-    class='bg-neutral-800 p-8 rounded-lg shadow-2xl max-w-sm w-full text-center border border-amber-600'
+    class='bg-slate-200 p-8 rounded-lg shadow-2xl max-w-sm w-full text-center border border-slate-300'
   >
-    <h3 class='text-white text-2xl font-bold mb-4'>¡Genial!</h3>
-    <p id='modalMessage' class='text-white text-lg mb-6'></p>
+    <h3 class='text-sky-700 text-2xl font-bold mb-4'>¡Genial!</h3>
+    <p id='modalMessage' class='text-slate-700 text-lg mb-6'></p>
     <button
       id='closeModalButton'
-      class='bg-amber-500 text-black px-6 py-2 rounded-md hover:bg-amber-600 transition-colors'
+      class='bg-slate-300 text-slate-700 px-6 py-2 rounded-md hover:bg-slate-400 hover:text-slate-900 transition-colors cursor-pointer'
     >
       Cerrar
     </button>

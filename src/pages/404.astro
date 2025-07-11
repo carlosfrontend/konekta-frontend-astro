@@ -1,0 +1,54 @@
+---
+import BrandLink from '../components/BrandLink.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title='Página no encontrada | Error 404'
+  '
+  description='Página para el error 404 de Konekta Frontend'
+>
+  <section>
+    <h1 class='text-4xl text-sky-700 font-bold'>Error 404</h1>
+    <p class='text-xl text-slate-700 text-center'>
+      La página que buscas no existe
+    </p>
+    <a href='/'>Volver</a>
+  </section>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 20dvh;
+    height: 100dvh;
+    gap: 12px;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-sky-700);
+  }
+  p {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-slate-700);
+  }
+
+  a {
+    background-color: var(--color-slate-300);
+    padding: 8px 16px;
+    border-radius: 5px 5px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover {
+    background-color: var(--color-slate-400);
+    color: var(--color-slate-900);
+  }
+</style>

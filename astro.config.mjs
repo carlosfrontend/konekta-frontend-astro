@@ -10,19 +10,19 @@ export default defineConfig({
   experimental: {
       fonts: [
       {
-        name: "Mochiy Pop P One",
+        name: "Space Grotesk",
         cssVariable: "--font-headings",
         provider: fontProviders.google(),
         subsets: ["latin"],
-        weights: [400],
+        weights: [300,400,500,600,700],
         styles: ["normal"],
       },
       {
-        name: "Manrope",
+        name: "Inter",
         cssVariable: "--font-primary",
         provider: fontProviders.google(),
         subsets: ["latin"],
-        weights: [200, 300, 400, 500, 600, 700, 800],
+        weights: [100,200, 300, 400, 500, 600, 700, 800],
       }
 
     ]

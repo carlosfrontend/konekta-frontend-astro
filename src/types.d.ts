@@ -35,8 +35,8 @@ export type SocialLinks = {
 }
 
 export type Heading = {
-    title: string[],
-    classNames: string[]
+    title: string,
+    className: string
 }
 
 export type InfoRow = ({

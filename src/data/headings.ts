@@ -1,41 +1,31 @@
 import type { Heading } from "../types"
 
+const COMMON_CLASS = 'text-sky-700'
+
 const infoHeading: Heading = {
-    title: ['INFORMACIÓN', 'DEL', 'EVENTO'],
-    classNames: [
+    title: 'INFORMACIÓN DEL EVENTO',
+    className:
+        COMMON_CLASS
 
-        'bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent',
-
-        'bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent',
-
-        'bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-    ]
 }
 
 
 const speakersHeading: Heading = {
-    title: ['NUESTROS', 'PONENTES'],
-    classNames: [
-        'bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent',
-        'bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-    ]
+    title: 'NUESTROS PONENTES',
+    className:
+        COMMON_CLASS
 }
 
 const scheduleHeading: Heading = {
-    title: ['AGENDA', 'DEL', 'EVENTO'],
-    classNames: [
-        'bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent',
-        'bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent',
-        'bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-    ]
+    title: 'AGENDA DEL EVENTO',
+    className:
+        COMMON_CLASS
 }
 
 const registrationHeading = {
-    title: ['REGÍSTRATE', 'GRATIS!'],
-    classNames: [
-        'bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent',
-        'bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent'
-    ]
+    title: 'REGISTRATE GRATIS!',
+    className:
+        COMMON_CLASS
 }
 
 export { infoHeading, speakersHeading, scheduleHeading, registrationHeading }

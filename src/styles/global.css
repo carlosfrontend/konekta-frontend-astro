@@ -45,16 +45,16 @@ html {
 }
 
 body {
-  @apply bg-stone-950 snap-y snap-mandatory;
+  @apply bg-gray-50 snap-y snap-mandatory;
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: var(--bg-gray-100);
   transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  @apply bg-black/90 shadow-[10px_1px_1px] shadow-white/20;
+  @apply bg-gray-100/90 shadow-[10px_1px_1px] shadow-slate-300;
 }
 .background {
   position: absolute;

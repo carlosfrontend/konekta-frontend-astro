@@ -22,24 +22,24 @@ function getSpeakerNames(speakerId: number | number[] | undefined): string {
 function getSessionTypeClass(type: string): string {
   switch (type.toLowerCase()) {
     case 'charla':
-      return 'bg-purple-700';
+      return 'bg-purple-100';
     case 'taller':
-      return 'bg-blue-700';
+      return 'bg-sky-100';
     case 'panel':
-      return 'bg-green-700';
+      return 'bg-emerald-100';
     case 'hackathon':
-      return 'bg-red-600';
+      return 'bg-rose-100';
     case 'general':
-      return 'bg-gray-700';
+      return 'bg-gray-100';
     default:
-      return 'bg-gray-700';
+      return 'bg-gray-100';
   }
 }
 ---
 
 <section
   id='schedule'
-  class='sm:py-20 bg-stone-950 text-white scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-10 snap-start'
+  class='sm:py-20 bg-gray-50 text-slate-700 scroll-mt-16 sm:scroll-mt-14 md:scroll-mt-10 snap-start'
 >
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
     <div class='flex justify-center items-center h-auto py-10'>
@@ -49,33 +49,33 @@ function getSessionTypeClass(type: string): string {
     <div class='flex flex-col lg:flex-row gap-8 lg:gap-12'>
       {
         scheduleData.map((dayData, index) => (
-          <div class='flex-1 bg-stone-900 rounded-lg shadow-xl p-6 border border-white/80'>
-            <h3 class='text-3xl font-semibold text-center mb-6 text-amber-200'>
-              <span class='text-amber-400 font-bold'> Día {index + 1}:</span>{' '}
+          <div class='flex-1 bg-slate-300 rounded-lg shadow-xl p-6 border border-slate-300'>
+            <h3 class='text-3xl font-semibold text-center mb-6 text-slate-700'>
+              <span class='text-sky-700 font-bold'> Día {index + 1}:</span>{' '}
               {dayData.day}
             </h3>
             <ul class='space-y-6'>
               {dayData.sessions.map((session) => (
-                <li class='p-4 rounded-lg bg-stone-800 border border-amber-600 shadow-md'>
+                <li class='p-4 rounded-lg bg-slate-200 border border-slate-300 shadow-md'>
                   <div class='flex justify-between items-center mb-2'>
-                    <span class='text-amber-300 font-semibold text-lg'>
+                    <span class='text-sky-700 font-semibold text-lg'>
                       {session.time}
                     </span>
                     <span
-                      class={`px-3 py-1 rounded-full text-sm font-medium text-white ${getSessionTypeClass(session.type)}`}
+                      class={`px-3 py-1 rounded-full text-sm font-medium text-slate-700 ${getSessionTypeClass(session.type)}`}
                     >
                       {session.type}
                     </span>
                   </div>
-                  <h4 class='text-xl font-bold text-indigo-100 mb-1'>
+                  <h4 class='text-xl font-bold text-sky-700 mb-1'>
                     {session.title}
                   </h4>
                   {session.speakerId && (
-                    <p class='text-orange-300 font-medium mb-2'>
+                    <p class='text-slate-700 font-medium mb-2'>
                       Ponente(s): {getSpeakerNames(session.speakerId)}
                     </p>
                   )}
-                  <p class='text-white/80 text-base'>{session.description}</p>
+                  <p class='text-slate-700 text-base'>{session.description}</p>
                 </li>
               ))}
             </ul>

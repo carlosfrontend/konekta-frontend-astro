@@ -8,14 +8,8 @@ const { firstWord, secondWord, path } = Astro.props;
 ---
 
 <div>
-  <a href={path} class='text-lg font-headings font-bold'>
-    <span
-      class='bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent font-bold'
-      >{firstWord}</span
-    >
-    <span
-      class='bg-linear-to-r from-amber-300 to-red-300 bg-clip-text text-transparent font-bold'
-      >{secondWord}</span
-    ></a
+  <a href={path} class='text-2xl font-headings font-bold'>
+    <span class='bg-linear-to-r text-sky-700 font-bold'>{firstWord}</span>
+    <span class='bg-linear-to-r text-pink-700'>{secondWord}</span></a
   >
 </div>
