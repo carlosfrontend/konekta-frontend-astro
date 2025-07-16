@@ -1,11 +1,23 @@
 ---
 import DownArrowIcon from './Icons/DownArrowIcon.astro';
 import MouseIcon from './Icons/MouseIcon.astro';
+import madridHeroImage from '../assets/images/madrid.avif';
+const optimizedMadridHeroImage = madridHeroImage.src;
 ---
 
+<head>
+  <link
+    rel='preload'
+    href={optimizedMadridHeroImage}
+    as='image'
+    type='image/avif'
+    crossorigin='anonymous'
+  />
+</head>
 <section
   id='home'
-  class='min-h-dvh bg-gray-50 bg-blend-luminosity bg-[url("../assets/images/madrid.avif")] bg-cover bg-no-repeat flex flex-col items-center justify-center px-4 bg-top-right opacity-85 snap-start'
+  class='min-h-dvh bg-gray-50 bg-blend-luminosity bg-cover bg-no-repeat flex flex-col items-center justify-center px-4 bg-top-right opacity-85 snap-start'
+  style={`background-image: url(${optimizedMadridHeroImage})`}
 >
   <div
     class='relative bg-gray-50/88 max-w-full md:w-[600px] z-10 rounded-md flex flex-col items-center justify-center gap-6 py-8 px-10 my-20 shadow-sm shadow-slate-500 border-slate-700 backdrop-blur-sm'
