@@ -21,3 +21,58 @@ import Footer from '../components/Footer.astro';
   <RegistratioForm />
   <Footer />
 </Layout>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const menuLinks = document.querySelectorAll('.menu a');
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+  function highlightMenu() {
+    let current = '';
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - sectionHeight / 6) {
+        current = section.getAttribute('id')?.toString() || '';
+      }
+    });
+
+    menuLinks.forEach((link) => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+
+      if (
+        link.getAttribute('href') === '#tickets' &&
+        link.getAttribute('href') === `#${current}`
+      ) {
+        link.classList.remove('active');
+        link.classList.add('active-special');
+      } else {
+        link.classList.remove('active-special');
+      }
+    });
+
+    mobileMenuLinks.forEach((link) => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+
+      if (
+        link.getAttribute('href') === '#tickets' &&
+        link.getAttribute('href') === `#${current}`
+      ) {
+        link.classList.remove('active');
+        link.classList.add('active-special');
+      } else {
+        link.classList.remove('active-special');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightMenu);
+  window.addEventListener('load', highlightMenu);
+</script>

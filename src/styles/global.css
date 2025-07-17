@@ -63,3 +63,11 @@ body {
   left: 0;
   z-index: 0;
 }
+
+.active {
+  @apply text-sky-700 font-black;
+}
+
+.active-special {
+  @apply bg-slate-500 font-black;
+}
