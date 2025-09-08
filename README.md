@@ -150,4 +150,18 @@ Este proyecto está bajo la Licencia MIT. Ver LICENSE.md para más detalles.
 GitHub: https://github.com/carlosfrontend
 ✉️💬📡
 
+## 📄⚖️📘 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver LICENSE.md para más detalles.
+📑🔓📝
+
+---
+
+**Desarrollado por Carlos Pulido** | [LinkedIn](https://www.linkedin.com/in/carlosfrontend/) | [GitHub](https://github.com/carlosfrontend)
+
+## Notas
+
+Documentación que podrías querer explorar:
+
+- [Overview (carlosfrontend/konekta-frontend-astro)](https://deepwiki.com/carlosfrontend/konekta-frontend-astro/1-overview)
 🚀 Gracias por visitar este proyecto. ¡No dudes en dejar tu ⭐ si te resulta útil o inspirador! Tu apoyo ayuda a mantener y mejorar este tipo de desarrollos. 🙌💡✨
